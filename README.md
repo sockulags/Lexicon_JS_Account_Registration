@@ -1,5 +1,5 @@
 # Lexicon_JS_Account_Registration
-###  Account Registration
+###  Account Registration - Live version at the bottom
 In this exercise you will build a form in which you can simulate a creation of an account to some web application. The purpose of this exercise is to practise on using different event listeners ( several are needed ) but also to create a basic application that is comprised of HTML, CSS and JavaScript.
 
 The form should have to following content and functionlity.
@@ -30,3 +30,5 @@ const registrationData = {
 This object is to be written to the console or written in an alert. The values should of course be corresponding to the values that the user have typed.
 
 *I would like that you also focus on writing **clean** code and use decent, thought-through, stylings.*
+
+[Account Registration](https://sockulags.github.io/Lexicon_JS_Account_Registration/)
