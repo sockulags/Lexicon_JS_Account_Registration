@@ -1,6 +1,5 @@
 import {regex, password, confirmPw, email, firstName, lastName} from "./constants.js";
 
-
 const submitBtn = document.querySelector(".form-btn");
 
 const registrationData={};
@@ -10,7 +9,6 @@ const formState = {
     email: false,
     password: false
 }
-
 
 function handleNameInput(input, feedback, property) {
     if (!regex.number.test(input.value) &&
@@ -37,8 +35,6 @@ firstName.input.addEventListener("change", () => {
 lastName.input.addEventListener("change", () => {
     handleNameInput(lastName.input, lastName.feedback, "lastName");
 });
-
-
 
 password.input.addEventListener("input",  () => {
   password.feedback.classList.remove("green");
@@ -131,8 +127,6 @@ submitBtn.addEventListener("click", (e) => {
     }
 })
 
-
-
 const inputs = [password.input, confirmPw.input, email.input, firstName.input, lastName.input];
 const feedbacks = [password.feedback, confirmPw.feedback, email.feedback, firstName.feedback, lastName.feedback];
 
@@ -140,7 +134,6 @@ function clearForm() {
     inputs.forEach((input) => (input.value = ""));
     feedbacks.forEach((feedback) => (feedback.innerText = ""));
 }
-
 
 function isCorrect(formState){
     return Object.values(formState).every(value => value === true);
