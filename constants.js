@@ -1,5 +1,5 @@
 export const regex = {
-specialChars: /[!"@#£$%?&\/{(\[\)*\]=})]/,
+specialChars: /[!"@#£$%&\/{(\[\)*\]=})]/,
 lowerCase: /[a-z]/,
 upperCase: /[A-Z]/,
 number: /[0-9]/,
