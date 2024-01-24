@@ -6,36 +6,103 @@
 }
 
 body {
-  background-color: #37aee2;
+  background-color: #dce3e6;
 }
+
+/* ---- FORM GRID -----  */
+.account-registration-form {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "firstName lastName"
+      "email email"
+      "password password"
+      "cPassword cPassword"
+      "empty button";
+    background-color: #fff;
+    column-gap: 20px;
+    min-width: 330px;
+    max-width: 400px;
+    height: auto;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 10px 20px;
+  }
+  
+  .form-header {
+    grid-area: header;
+    text-align: left;
+  }
+  
+  .firstName {
+    grid-area: firstName;
+  }
+  
+  .lastName {
+    grid-area: lastName;
+  }
+  
+  .email {
+    grid-area: email;
+  }
+  
+  .password {
+    grid-area: password;
+  }
+  
+  .confirmPassword {
+    grid-area: cPassword;
+  }
+  
+  .form-btn {
+    grid-area: button;
+  }
+/* ------- GRID END -----*/
 
 button,
 h1 {
-  font-family: "Oswald", sans-serif;
+    font-family: 'Vollkorn', serif;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 600;
 }
 
 label {
   display: flex;
-  flex-direction: column;
-  width: fit-content;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;  
   margin: 0;
   font-size: 18px;
   width: 100%;
+  margin-bottom: 0px;  
 }
 
 input {
   border: none;
-  border-bottom: 2px solid gray;
-  margin-right: 30px; 
+  border-bottom: 2px solid gray;   
   font-size: 16px;
   width: 100%;
+  border: 1px solid rgb(241, 241, 241);
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 2px 5px;
+    caret-color: gray;   
+}
+
+input:auto-fill{
+    background-color: #f7f7f7 !important;
 }
 
 input:focus {
   box-shadow: none;
   outline: none;
+  background-color: #ececec;
   top: 0;
+  
 }
 
 button {
@@ -62,50 +129,26 @@ button:active {
   background-image: linear-gradient(-180deg, #7dd6fc 0%, #5cccfc 100%);
 }
 
-.account-registration-form {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "firstName lastName"
-    "email email"
-    "password password"
-    "cPassword cPassword"
-    "empty button";
-  background-color: #fff;
-  column-gap: 20px;
-  width: 400px;
-  height: 350px;
-  margin: 50px auto;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  padding: 10px 20px;
+.confirm-pw-status,
+.pw-status,
+.email-status,
+.first-name-status,
+.last-name-status{
+flex:1;
+text-align: end;
+font-size: 12px;
+align-self: flex-end;
+color:red;
+font-weight: 500;
 }
 
-.form-header {
-  grid-area: header;
-  text-align: left;
+.first-name-status,
+.last-name-status,
+.email-status{
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.firstName {
-  grid-area: firstName;
-}
-
-.lastName {
-  grid-area: lastName;
-}
-
-.email {
-  grid-area: email;
-}
-
-.password {
-  grid-area: password;
-}
-
-.confirmPassword {
-  grid-area: cPassword;
-}
-
-.form-btn {
-  grid-area: button;
+.green{
+    color: rgb(0, 189, 0);
 }
